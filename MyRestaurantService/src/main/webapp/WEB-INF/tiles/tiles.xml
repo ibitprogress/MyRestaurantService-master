@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE tiles-definitions PUBLIC  
+      "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  
+      "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+	<!-- Base Define -->
+	<definition name="base" template="/WEB-INF/layouts/classic.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/views/fragments/_header.jsp" />
+		<put-attribute name="sidebar" value="/WEB-INF/views/fragments/_sidebar.jsp" /> 
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/views/fragments/_footer.jsp" />
+	</definition>
+
+	<!-- Home Page -->
+	<definition name="index" extends="base">
+		<put-attribute name="title" value="Home Page" />
+		<put-attribute name="body" value="/WEB-INF/views/index.jsp" />
+	</definition>
+
+	<definition name="login" extends="base">
+		<put-attribute name="title" value="Login Page" />
+		<put-attribute name="body" value="/WEB-INF/views/login.jsp" />
+	</definition>
+
+	<definition name="user/register" extends="base">
+		<put-attribute name="title" value="Register Page" />
+		<put-attribute name="body" value="/WEB-INF/views/user/register.jsp" />
+	</definition>
+
+	<definition name="user/regSuccess" extends="base">
+		<put-attribute name="title" value="Register Success" />
+		<put-attribute name="body" value="/WEB-INF/views/user/regSuccess.jsp" />
+	</definition>
+
+	<definition name="user/edit" extends="base">
+		<put-attribute name="title" value="Edit UserInfo" />
+		<put-attribute name="body" value="/WEB-INF/views/user/edit.jsp" />
+	</definition>
+
+	<definition name="user/profile" extends="base">
+		<put-attribute name="title" value="Register Success" />
+		<put-attribute name="body" value="/WEB-INF/views/user/profile.jsp" />
+	</definition>
+
+	<definition name="admin/controll" extends="base">
+		<put-attribute name="title" value="AdminMainPage" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/controll.jsp" />
+	</definition>
+
+	<definition name="admin/category/categoryCreate" extends="base">
+		<put-attribute name="title" value="CreateCategory" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/category/categoryCreate.jsp" />
+	</definition>
+	
+	<definition name="admin/category/categoryEdit" extends="base">
+		<put-attribute name="title" value="EditCategory" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/category/categoryEdit.jsp" />
+	</definition>
+	
+	<definition name="admin/category/deleteSuccess" extends="base">
+		<put-attribute name="title" value="DeleteCategory" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/category/deleteSuccess.jsp" />
+	</definition>
+	
+	<definition name="admin/product/createProduct" extends="base">
+		<put-attribute name="title" value="CreateProduct" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/product/createProduct.jsp" />
+	</definition>
+	
+	<definition name="menu" extends="base">
+		<put-attribute name="title" value="ViewMenu"/>
+		<put-attribute name="body" value="/WEB-INF/views/menu.jsp"/>
+	</definition>
+	
+	<definition name="news" extends="base">
+		<put-attribute name="title" value = "ViewLastNews"/>
+		<put-attribute name="body" value="/WEB-INF/views/news.jsp"/> 
+	</definition>
+	
+		<definition name="admin/news/addNews" extends="base">
+		<put-attribute name="title" value="AddNews"/>
+		<put-attribute name="body" value="/WEB-INF/views/admin/news/addNews.jsp"/>
+	</definition>
+	
+	<definition name="reservSuccess" extends="base">
+		<put-attribute name="title" value = "ReservationSuccess"/>
+		<put-attribute name="body" value="/WEB-INF/views/reservSuccess.jsp"/> 
+	</definition>
+	
+	<definition name="reservation" extends="base">
+		<put-attribute name="title" value = "Reservation"/>
+		<put-attribute name="body" value="/WEB-INF/views/reservation.jsp"/> 
+	</definition>
+	
+	<definition name="contact" extends="base">
+		<put-attribute name="title" value = "Contacts"/>
+		<put-attribute name="body" value="/WEB-INF/views/contact.jsp"/> 
+	</definition>
+	
+</tiles-definitions>

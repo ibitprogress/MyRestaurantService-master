@@ -1,0 +1,541 @@
+.ten .shape {
+  animation: ten 10s infinite linear;
+  transform-origin: 50% 8em;
+  top: calc(50% - 6em);
+}
+
+@keyframes ten {
+  0%, 10% {
+    transform: none;
+    animation-timing-function: cubic-bezier(.87,-1.05,.66,1.31);
+  }
+  40% {
+    transform: rotateZ(45deg) scale(2);
+    animation-timing-function: cubic-bezier(.16,.54,0,1.38);
+  }
+  
+  70%, 100% {
+    transform: rotateZ(360deg) scale(1);
+  }
+}
+
+/* General styling */
+body {
+  margin: 0;
+}
+
+.principle {
+  width: 100%;
+  height: 200px;
+  position: relative;
+}
+
+.shape {
+	margin-left: 40%;
+	margin-top: 200px;
+  border: 1em solid #f4f4f4;
+  width: 4em;
+  height: 4em;
+  top: calc(50% - 2em);
+  left: calc(50% - 2em);
+  color: #fff;
+}
+
+
+/*
+
+
+*/
+
+
+/************************************************************************************
+RESET
+*************************************************************************************/
+html, body, address, blockquote, div, dl, form, h1, h2, h3, h4, h5, h6,
+	ol, p, pre, table, ul, dd, dt, li, tbody, td, tfoot, th, thead, tr,
+	button, del, ins, map, object, a, abbr, acronym, b, bdo, big, br, cite,
+	code, dfn, em, i, img, kbd, q, samp, small, span, strong, sub, sup, tt,
+	var, legend, fieldset {
+	margin: 0;
+	padding: 0;
+}
+
+img, fieldset {
+	border: 0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	width: auto\9; /* ie8 */
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup,
+	menu, nav, section {
+	display: block;
+}
+
+select{
+	 background: #ffffff; 
+    padding: 7px 0 10px 30px;
+    margin: 0 0 10px 0;
+    width: 353px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px #ccc inset, 0 1px 0 #fff;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+textarea{
+	 background: #ffffff; 
+    padding: 7px 0 10px 30px;
+    margin: 0 0 10px 0;
+    width: 353px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px #ccc inset, 0 1px 0 #fff;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+/************************************************************************************
+GENERAL STYLING
+*************************************************************************************/
+body {
+	background: url(/resources/images/food.jpg) ;
+	background-size: cover;
+	font: .81em/150% Arial, Helvetica, sans-serif;
+	color: #666;
+}
+
+a {
+	color: #026acb;
+	text-decoration: none;
+	outline: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+p {
+	margin: 0 0 1.2em;
+	padding: 0;
+}
+
+/* list */
+ul, ol {
+	margin: 1em 0 1.4em 24px;
+	padding: 0;
+	line-height: 140%;
+}
+
+li {
+	margin: 0 0 .5em 0;
+	padding: 0;
+}
+
+/************************************************************************************
+STRUCTURE
+*************************************************************************************/
+#pagewrap {
+	width: 980px;
+	margin: 0 auto;
+}
+
+.welcomeList{
+	text-align: justify;
+	display: inline-block;
+	font-size: 14px;
+}
+/************************************************************************************
+FORM
+*************************************************************************************/
+.h1_form{
+	text-align: center;
+	margin-top: -15px;
+	font: bold 35px/100% Rockwell, 'Courier Bold', Courier, Georgia, Times,
+		'Times New Roman', serif;
+	color: #f8c592;
+	text-decoration: none;
+	text-shadow: 2px 2px #000000;
+	font-size: 50px;
+	
+	width: 12em;
+    white-space:nowrap;
+    overflow:hidden;
+    animation: type 3s steps(50, end);
+}
+@keyframes type{
+    from { width: 0; }
+}
+ 
+@-webkit-keyframes type{
+    from { width: 0; }
+}
+
+.error_control{
+	color: red;
+}
+.linkA{
+	font-size: 18px;
+	font-style: italic;
+}
+label{
+	font-style: italic;
+	font-size: 20px;
+	font-weight: 500;
+	font-variant: small-caps;
+}
+#login {
+	
+	margin-left: 12%;
+    width: 300px;
+	border-radius: 3px;
+	background: #f4f4f4;
+	padding: 30px;
+	top: 50%;
+    left: 50%;
+    z-index: 0;
+}
+
+#login:before
+{
+    content: '';
+    z-index: -1;
+    border: 1px dashed #ccc;
+    top: 5px;
+    bottom: 5px;
+    left: 5px;
+    right: 5px;
+    box-shadow: 0 0 0 1px #fff;
+}
+fieldset
+{
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+#inputs input
+{
+    background: #ffffff; 
+    padding: 7px 0 10px 30px;
+    margin: 0 0 10px 0;
+    width: 353px; /* 353 + 2 + 45 = 400 */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px #ccc inset, 0 1px 0 #fff;
+}
+
+#username
+{
+    background-position: 5px -2px !important;
+}
+
+#password
+{
+    background-position: 5px -52px !important;
+}
+#idUnvisible input{
+	background: #b6afaf; 
+	text-decoration: blink; 
+    padding: 7px 0 10px 30px;
+    margin: 0 0 10px 0;
+    width: 353px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px #ccc inset, 0 1px 0 #fff;
+}
+#inputs input:focus
+{
+    background-color: #fff;
+    border-color: #e8c291;
+    outline: none;
+    box-shadow: 0 0 0 1px #e8c291 inset;
+}
+#actions
+{
+    margin: 25px 0 0 0;
+}
+
+#submit
+{
+	margin-left: 35%;
+    background-color: #ffb94b;
+    background-image: linear-gradient(top, #fddb6f, #ffb94b);
+    border-radius: 3px;  
+    border-color: red;
+    float: left;
+    height: 35px;
+    padding: 0;
+    width: 120px;
+    cursor: pointer;
+    font: bold 15px Arial, Helvetica;
+    color: #8f5a0a;
+}
+
+#submit:hover,#submit:focus
+{		
+    background-color: #fddb6f;
+    background-image: linear-gradient(top, #ffb94b, #fddb6f);
+}	
+
+#submit:active
+{		
+    outline: none;
+     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;		
+}
+
+
+#actions a
+{
+    color: #3151A2;    
+    float: right;
+    line-height: 35px;
+    margin-left: 10px;
+}
+/************************************************************************************
+HEADER
+*************************************************************************************/
+#header {
+	position: relative;
+	height: 300px;
+}
+/*time div*/
+#time_div {
+	margin-left: 83%;
+	padding-top: 200px;
+	font-size: 40px;
+	font-weight: 600;
+	font-family: Papyrus, fantasy;
+	color: #e45c1b;
+}
+
+/* site logo */
+#site-logo {
+	position: absolute;
+	top: 80px;
+	display: inline-block;
+	
+}
+
+#site-logo a {
+	font: bold 35px/100% Rockwell, 'Courier Bold', Courier, Georgia, Times,
+		'Times New Roman', serif;
+	color: #fff;
+	text-decoration: none;
+	text-shadow: 2px 2px #ff0000;
+	font-size: 50px;
+}
+
+/* site description */
+#site-description {
+	font: italic 100%/130% "Times New Roman", Times, serif;
+	color: #fff;
+	position: absolute;
+	top: 240px;
+}
+
+/************************************************************************************
+MAIN NAVIGATION
+*************************************************************************************/
+#main-nav {
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0.1);
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: 100;
+}
+
+#main-nav li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	float: left;
+	position: relative;
+}
+
+#main-nav li:first-child {
+	margin-left: 10px;
+}
+
+#main-nav a {
+	line-height: 60%;
+	font-size: 20px;
+	font-weight: bold;
+	font-family: Rockwell, 'Courier Bold', Courier, Georgia, Times,
+		'Times New Roman', serif;
+	color: #fff;
+	display: block;
+	padding: 14px 15px;
+	text-decoration: none;
+	text-shadow: 0 -1px 0.2 rgba(0, 0, 0, .4);
+}
+
+#main-nav a:hover {
+	color: #fff;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+/************************************************************************************
+CONTENT
+*************************************************************************************/
+#content {
+	background: #f4f4f4;
+	text-align: center;
+	margin: 30px 0 30px;
+	padding: 20px 35px;
+	width: 600px;
+	float: left;
+	/* rounded corner */
+	border-radius: 8px;
+	/* box shadow */
+	box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+	opacity: 0.9;
+}
+
+/* post */
+.post {
+	margin-bottom: 40px;
+}
+
+.post-title {
+	margin: 0 0 5px;
+	padding: 0;
+	font: bold 26px/120% Arial, Helvetica, sans-serif;
+}
+
+.post-title a {
+	text-decoration: none;
+	color: #000;
+}
+
+.post-meta {
+	margin: 0 0 10px;
+	font-size: 90%;
+}
+
+/* post image */
+.post-image {
+	margin: 0 0 15px;
+}
+
+/************************************************************************************
+SIDEBAR
+*************************************************************************************/
+#sidebar {
+	
+	width: 280px;
+	float: right;
+	margin: 30px 0 30px;
+}
+.h3_sidebar{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 24px;
+	font-family: Papyrus, fantasy;
+}
+.table_menu{
+	margin-top: 10px;
+}
+.table_profile{
+	margin-top: 10px;
+	margin-left: 25%;
+}
+
+
+
+#submitSidebar{
+	margin-left: 70%;
+    background-color: #ffb94b;
+    border-radius: 3px;  
+    border-color: red;
+    height: 25px;
+    padding: 0;
+    width: 80px;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: Papyrus, fantasy;
+    font-weight: 600;
+  	color: #fff;
+	text-decoration: none;
+	text-shadow: 2px 2px #3509d0;
+}
+
+.widget {
+	text-align: center;
+	background: #f4f4f4;
+	margin: 0 0 30px;
+	padding: 10px 20px;
+	/* rounded corner */
+	border-radius: 8px;
+	/* box shadow */
+	box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+	opacity: 0.9;
+}
+
+.widgettitle {
+	margin: 0 0 5px;
+	padding: 0;
+}
+
+.widget ul {
+	margin: 0;
+	padding: 0;
+}
+
+.widget li {
+	margin: 0;
+	padding: 6px 0;
+	list-style: none;
+	clear: both;
+	border-top: solid 1px #eee;
+}
+
+/* flickr widget */
+.widget .flickr_badge_image {
+	margin-top: 10px;
+}
+
+.widget .flickr_badge_image img {
+	width: 48px;
+	height: 48px;
+	margin-right: 12px;
+	margin-bottom: 12px;
+	float: left;
+}
+
+/************************************************************************************
+FOOTER
+*************************************************************************************/
+#footer {
+	text-align: center;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+}
+/************************************************************************************
+CLEARFIX
+*************************************************************************************/
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+.clearfix {
+	display: inline-block;
+}
+
+.clearfix {
+	display: block;
+	zoom: 1;
+}
